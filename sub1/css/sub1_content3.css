@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+html{font-size: 16px;}
+
+.hidden {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+    position: absolute;
+    left: -1000%;
+    top: 0;
+  }
+
+/* 법원 기능 내용 영역 */
+
+#content {width: 1400px; margin: 0 auto; border: 10px solid #FFF7F7; border-top: none; border-bottom: none;}
+.content_area{width: 1400px; margin: 0 auto; position: relative; margin-bottom: 150px; }
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+
+#sessions .small_tit .tabs{display: flex; gap: 30px; }
+/* 오른쪽 위에 클릭 버튼임 */
+
+
+/* 심판권 영역 */
+.tabs{display: flex;text-align: center;
+    width: 600px;
+    margin: 0 auto;}
+.tabs li{width: 200px; font-size: 1.2rem;}
+.tabs li a{padding: 10px 0; border-radius: 15px; }
+.tabs li a.active{background:#004e97 ; color: #fff;}
+#first_page{ margin: 100px 0 50px; }
+.small_tit{font-size: 2rem;margin-bottom: 50px; text-align: center;}
+
+.small_tit_link{display: flex; gap: 25px; border-bottom: 1px solid blue;}   
+    
+    .list1_txt_tit{width: 800px; margin: 0 auto 50px;
+        text-align: justify; padding: 30px; line-height: 2.2rem; text-align: center;
+        font-size: 1.1rem;}
+
+    /* .slid1_text_bottom{display: flex; margin:100px 0 0;}
+    .slid1_text_bottom ul {margin: 10px 0 0 70px; font-size: 1.5rem; width: 1000px;
+        display: flex;}
+    .slid1_text_bottom ul li{line-height: 2.3rem; margin: 10px; width: 300px;} */
+
+    .big_box>div{display: none;}
+    .txt_in_list1{margin-top: 100px;}
+    .txt_in_list1 ul{display: flex;
+        justify-content: space-between; margin-top: 50px;}
+    .txt_in_list1 ul li{position: relative; width: 440px; height: 560px;
+        text-align: center; display: flex;}
+    .txt_in_list1 ul:hover li{transition: all .8s ease-out; }
+
+     .list11_body img{ width: 100%; margin: 0 20px;
+        transition: all .5s ease-out; opacity: 1; border-radius: 30px;
+    }
+    .list11_body:hover img{ 
+        opacity: .1;
+        transform: scale(1.1); filter: blur(1);
+        box-shadow: 1px 1px 10px 1px rgba(0,0,0,.7); }
+
+    .txt_in_list1 ul li strong{width: 100%; text-align: center; 
+        font-size: 1.5rem; color: #fff; position: absolute;
+         padding-top: 300px;}
+    .txt_in_list1 ul li:hover strong{color: #333; padding-top: 150px; transition: all .7s ease-out; }
+    .txt_in_list1 ul li p{ position: absolute;
+        margin: 280px 70px; font-size: 1.1rem;
+        font-weight: 500;
+        text-align: center;
+        color: #fff; line-height: 1.9rem;
+        text-align: justify; opacity:0; transition: all .7s ease-out;}
+     .txt_in_list1 ul li:hover p{color: #333; opacity: 1;}
+
+
+
+    /* 심판권 행사 영역 */
+    .second_page {justify-content: space-between; margin: 100px 0 50px; position: relative;}
+    .second_page .small_tit_1{font-size: 1.3rem; text-align: center; padding-top: unset;}
+
+    .second_page ul {width: 100%; display: flex; flex-wrap: wrap; justify-content: center; column-gap: 30px;
+        row-gap: 30px; position: relative; margin-top: 50px;}
+    
+    .second_page ul li{width: 600px; border: 1px solid red; text-align: center;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px; }
+    .second_page ul li:nth-of-type(1)>p, :nth-of-type(2)>p{padding-top: 80px;}
+    .second_page ul li h5{font-size:  1.5rem; margin-top: 20px;}
+    .second_page ul li p{font-size:  1.2rem; text-align: center; line-height: 2.5rem;
+       }
+
+    .second_page ul .second_page_list1{background-color: #FBD1C6; padding: 25px;}
+    .second_page ul .second_page_list2{background-color: #CBCDF4; padding: 25px;}
+    .second_page ul .second_page_list3{background-color: #CBCDF4; padding: 25px;}
+    .second_page ul .second_page_list4{background-color: #FBD1C6; padding: 25px;}
+    .second_page .center_building{position: absolute;top: 410px;
+        left: 650px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2); 
+        border-radius: 50%; background-color: #FFFF; width: 100px; height: 100px; text-align: center;}
+    .second_page .center_building i{font-size: 3rem; padding: 20px;}
+    
+
+    .third_page {justify-content: space-between; margin: 100px 0 50px;}
+    .third_page .small_tit_1{font-size: 1.5rem; padding-left: 80px; display: flex;}
+    .third_page .small_tit_1 .view_detail{width: 200px; border: 1px solid #333; text-align: center; border-radius: 30px;
+        background-color: #666666; color: #FFFF; margin-left: 50px;font-size: 1.2rem;
+        padding: 5px 0 5px 0;}
+    .third_page .small_tit_1 .view_detail:hover {background-color: #333; transition: all .5s ease-out;}
+    
+
+    .third_page .third_main_text{ width: 100%; font-size: 1.3rem; border: .5px solid #999; text-align: justify;
+        padding: 50px; box-sizing: border-box; margin-top: 50px; background-color: #F5EDED; line-height: 3rem;
+        border-radius: 20px;}
+
+
+
+
+
+
+
+
+
+    /* 공개변론 영역 */

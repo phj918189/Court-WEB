@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+html{font-size:  16px;}
+
+
+/* 법원구성 페이지 내용영역 */
+
+#content {width: 1400px; margin: 0 auto; border: 10px solid #FFF7F7; border-top: none; border-bottom: none;}
+/* #content :nth-child(3){width: 1400px; height: 2000px; position: absolute;} */
+
+.content_area{width: 1400px; margin: 0 auto; position: relative;}
+.content_area>img{width: 1400px; position: absolute; opacity: .3; height: 1600px;}
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+
+.content_area {width: 1400px; margin: 50px auto; font-size: 30px; }
+.content_area .content_compos{display: block;}
+.content_area .content_compos div{width: 100%; height: 400px; position: relative; 
+    margin: 200px 0;}
+.content_area .content_compos div p{ position:  absolute; width: 1000px; padding: 50px; top: 45px; line-height: 50px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .5); font-size: 1.3rem;}
+
+.content_area .content_compos div img{position: absolute; right: 0; 
+    border-top-left-radius: 70px; border-bottom-left-radius: 70px;
+    height: 400px; right: 30px;}
+
+.content_area .content_compos .content_compos_2 p{right: 0;  position:  absolute;  width: 1000px; padding: 50px; top: 45px; line-height: 50px; text-align: right;}
+.content_area .content_compos .content_compos_2 img{left: 0; left: 30px; border-radius: unset;
+    border-top-right-radius: 70px; border-bottom-right-radius: 70px;}
+
+
+/* .content_area .case_first img{width: 600px;} */
+
+.researcher{position: relative; margin-bottom: 150px;}
+/* .researcher img{position: relative;} */
+.researcher .blur_box{height: 250px; color: #FFF7F7; position: absolute;}
+
+.researcher_txt{position: absolute; top: 0; display: flex;
+    color: #FFF7F7; margin: 70px; padding-top: 20px;}
+
+.researcher h4{ font-size: 1.6rem; width: 300px; text-align: center; top: 10px; padding-top: 0px;}
+.researcher p{ padding-left: 200px; font-size: 1.3rem;}

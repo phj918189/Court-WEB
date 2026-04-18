@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.hidden{display: block; position: absolute;
+    width: 1px; height: 1px; overflow: hidden;
+        color: #FFF7F7; left: -1000px; top: 0;}
+
+#content {width: 1400px; margin: 0 auto; border: 10px solid #FFF7F7; border-top: none; border-bottom: none;}
+.content_area{width: 1400px; margin: 0 auto; position: relative; overflow: hidden;}
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+
+.notice-text{display: flex; padding-left: 100px; position: absolute;}
+.notice-text a{border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px 15px;
+    margin-left: 10px;
+    text-align: center; background: #004e97; color: #FFF; transition: all .5s;}
+.notice-text a:hover{background: #999;}
+
+.tableSearch{float: right; padding-right: 100px;}
+.tableSearch input{border-radius: 5px;}
+.tableSearch .searchBtn{border-radius: 10px;}
+
+label{overflow: hidden;}
+
+.graySelect{height: 30px; border: 1px solid black; vertical-align: top; color: #333;}
+option{font-weight: normal; display: block; padding-block-start: 0px; padding-block-end: 1px; 
+    min-block-size: 1.2em; padding-inline: 2px; white-space: nowrap;}
+#type{height: 30px; width: auto; border: 1px solid black; vertical-align: top;}
+.grayInput{height: 26px; border: 1px solid black; line-height: 25px; vertical-align: top;}
+.searchBtn{height: 30px; display: inline-block; background: #999; color: #FFF7F7; height: 30px; padding: 0 25px; margin-left: 3px;
+    line-height: 30px;}
+
+table{border-collapse: collapse; border-spacing: 0;}
+table{width: 1200px; margin-top: 10px; border-top: 3px solid red; font-size: 14px;
+    margin: 100px auto;}
+table tr{font-size: 17px; padding: 10px 0;}table tr{border-bottom: 1px solid #d9d9d9;}
+
+th{padding: 10px 0 ;}
+table tr td{text-align: left; font-size: 14px; padding: 13px 40px; 
+    background: #fff; vertical-align: middle;}
+table td{text-align: left; padding: 0 30px;}
+.case_list span{    
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto 100px;
+    border: 3px solid #999;
+    padding: 50px;
+    width: 40%;
+    color: red;
+    font-weight: bold;
+    border-radius: 10px;
+}

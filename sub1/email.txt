@@ -1,0 +1,110 @@
+1.EmailJS 사이트에 회원가입 (구글 메일과 계정 패스워드로 가입)
+   https://www.emailjs.com/
+2.로그인을 한다
+3.Email Services 에서 Ass New Service 버튼을 클릭한다 
+   -다양한 서비스가 나오는데 gmail을 선택한다
+   -Name : 메일아이디(아무값이나 넣어도 된다)
+   -Service ID : 그대로 사용한다 (변경X)
+   -Connect Account 버튼을 클릭한다
+   -본인 gmail 계정을 선택한다 => 계속을 선택 
+   -EmailJS에서 액세스할 수 있는 항목을 선택하세요.
+       -나를 대신하여 이메일 전송 부분을 꼭!!! 체크한다  => 계속 선택
+   -Create Service 버튼을 클릭한다
+   -이메일 서비스가 등록된다
+
+   -Email Templates 왼쪽 메뉴를 클릭한다
+   -Create New Template 버튼을 클릭한다
+   -왼쪽에 To Email 부분의 메일주소로 메일이 보내지게 된다(확인!!)
+   -왼쪽위에 save 버튼을 클릭한다
+   -이메일 템플릿이 등록된다
+
+   -왼쪽의 Email Services 와 Email Templates 을 클릭하면 
+     Service ID:service_4ltp9d2
+     Template ID:template_v76i9eb  를 확인할 수 있다
+
+4.from.html을 작성한다   
+
+    <form action="" id="contact-form">
+        <div>
+            <label for="user-name">이름:</label>
+            <input type="text" id="user-name" name="user-name" required>
+        </div>
+        <div>
+            <label for="user-email">이메일:</label>
+            <input type="email" id="user-email" name="user-email" required>
+        </div>
+        <div>
+            <label for="user-tel">전화번호:</label>
+            <input type="text" id="user-tel" name="user-tel" required placeholder="010-0000-0000">
+        </div>
+        <div>
+            <label for="message">문의내용:</label>
+            <textarea name="message" id="message"></textarea>
+        </div>
+        <button type="submit">보내기</button>
+    </form>
+
+    -라이브러리 js파일을 넣는다
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "YOUR_PUBLIC_KEY",
+            });
+        })();
+    </script>
+    <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        alert('메일 전송에 성공하였습니다.');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        alert('메일 전송에 실패하였습니다.');
+                    });
+            });
+    </script>
+
+    -여기에서 3부분의 값을 수정하면된다
+         -publicKey: "YOUR_PUBLIC_KEY",    -> 왼쪽상단의 본인 아이디 부분을 클릭하면 키를 볼 수 있다
+         -'contact_service'     -> 서비스 id값을 넣는다
+         -'contact_form'        -> 템플릿 id값을 넣는다
+     
+
+5.이메일 템플릿을 수정한다
+  -Subject -> New message from {{from_name}}   => New message from {{user-name}}    (작성한 폼의 아이디 입력 name값)
+  -Content  부분도 수정한다 (왼쪽의 Edit Conent->디자인 에디터 선택)
+
+    안녕하세요!!
+
+    {{user-name}} 님 으로 부터 온 새로운 메일입니다.
+
+    ☎ :  {{user-tel}}
+
+    {{message}}
+
+    읽어주셔서 감사합니다 ^^
+
+   -오른쪽에 Reply To => {{user-email}}   로 수정한다
+   -저장한다
+   
+ 6.email.html 에서 폼을 직접 입력하여 메일로 전송해서 확인해 본다
+
+
+my service ID : service_49vi03t
+my template ID : template_ouzaedc
+my public Key : Oc232LdC6x5Or4A61
+----------------------------------------------------
+
+form id ="contact-form"
+이름 name:"user-name"
+이메일 name:"user-email"
+전화번호 name:"user-tel"
+문의내용 name:"user-message
+
+
+    

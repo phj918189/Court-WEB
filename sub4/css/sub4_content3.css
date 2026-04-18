@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+.hidden{display: block; position: absolute;
+    width: 1px; height: 1px; overflow: hidden;
+        color: #FFF7F7; left: -1000px; top: 0;}
+
+#content {width: 1400px; margin: 0 auto; border: 10px solid #FFF7F7; border-top: none; border-bottom: none;}
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+
+.container{width: 1000px; margin: 0 auto; position: relative; overflow: hidden; text-align: center;
+    font-size: 16px;}
+
+
+      .container {
+        width: 100%;
+        margin: 0 auto;
+      }
+      
+      .main {
+        padding: 20px 0;
+      }
+      
+      .section {
+        margin-bottom: 40px;
+      }
+     
+
+      iframe{height: 500px;}
+      
+      .map-container {
+        width: 100%;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+     .wayTocome{width: 1200px; margin: 150px auto;}
+     .wayTocome table{line-height: 2rem;}
+     .wayTocome table th{padding: 20px 0 20px 50px; color: #004e79; font-size: 1.3rem; width: 100px;
+      text-align: left;}
+     .wayTocome table td{padding:10px 50px 0 0; border-bottom: 3px solid #d9d9d9;
+      text-align: left; width: 40%;}
+
+      #content .title_area h2::after{
+        content: '';
+        height: 100px;
+        width: 1px;
+        background: #ccc;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 250px;
+        transition: all 1s ease-out;
+        transform: scaleX(2);
+        transition-delay: 1s;
+      }
+
+
+      h2{position: relative;}
+      span{position: absolute; font-size: .8rem; text-align: center;}
+     

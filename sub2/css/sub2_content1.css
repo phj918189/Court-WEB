@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.hidden{display: block; position: absolute;
+    width: 1px; height: 1px; overflow: hidden;
+        color: #FFF7F7; left: -1000px; top: 0;}
+
+#content {width: 1400px; margin: 0 auto; border: 10px solid #FFF7F7; border-top: none; border-bottom: none;}
+.content_area{width: 1400px; margin: 0 auto; position: relative; overflow: hidden;}
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+.tab_menu{ width: 200px; position: absolute; left: 95px;}
+.tab_menu ul{display: flex;}
+.tab_menu li{left: 50px; margin: 0 auto;}
+
+.tableSearch{float: right; position: absolute; right: 100px;}
+
+label{overflow: hidden;}
+
+.graySelect{height: 30px; border: 1px solid black; vertical-align: top; color: #333;}
+option{font-weight: normal; display: block; padding-block-start: 0px; padding-block-end: 1px; 
+    min-block-size: 1.2em; padding-inline: 2px; white-space: nowrap;}
+#jtype{height: 30px; width: auto; border: 1px solid black; vertical-align: top;}
+.grayInput{height: 26px; border: 1px solid black; line-height: 25px; vertical-align: top;}
+.searchBtn{height: 30px; display: inline-block; background: #999; color: #FFF7F7; height: 30px; padding: 0 25px; margin-left: 3px;
+    line-height: 30px;}
+
+.table1, .table2{width: 1200px; margin: 60px auto; border-bottom: 3px solid red; font-size: 16px;}
+table{border-collapse: collapse; border-spacing: 0;}
+thead{display: table-header-group; margin: 0; border: 0; font-size: 16px; vertical-align: top;}
+tr{display: table-row;}
+
+.table1 th, .table2 th{background: #f3f3f3; font-size: 14px; border-bottom: 1pxl solid skyblue; padding: 13px;
+    vertical-align: top;}
+
+tbody{display: table-row-group;}
+.table1 tr, .table2 tr{border-bottom: 1px solid #7ecada;}
+.table1 tr td, .table2 tr td{text-align: center; font-size: 14px; padding: 13px 5px; background: #fff; vertical-align: middle;}
+
+
+ /* 탭 스타일 */
+ .tabs {
+  display: flex;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .content_area .tab_menu a.tab{display: block;}
+ .content_area .table2{display: none;}
+
+  .tab-button1, .tab-button2 {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+  }
+
+  .tab-button1:hover, .tab-button2:hover {
+    background-color: #ddd;
+  }
+
+  .tab.active {
+    background-color: #2e86de;
+    color: white;
+    font-weight: bold;
+    transition: all .5s ease-out;
+  }
+
+  
+
+  /* .tab-content.active {
+    display: block;
+  } */
+
+  /* 검색 스타일 */
+  .tableSearch input,
+  .tableSearch select {
+  
+  }
+
+  .searchBtn {
+    /* padding: 6px 12px; */
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .searchBtn:hover {
+    background-color: #1a6bbf;
+  }

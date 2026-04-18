@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+.hidden{display: block; position: absolute;
+    width: 1px; height: 1px; overflow: hidden;
+        color: #FFF7F7; left: -1000px; top: 0;}
+
+#content {width: 1400px; margin: 0 auto; border: 10px solid #FFF7F7; border-top: none; border-bottom: none;}
+.content_area{width: 1400px; margin: 0 auto; position: relative; overflow: hidden;}
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+
+.content_area .chart{text-align: center; }
+.content_area .chart a, .content_area .chart span{padding: 8px 0;}
+.content_area .chart h4{display: inline-block; margin: 0 0 20px 0; padding: 10px 80px; 
+    color: #333; font-size: 30px; font-weight: bold;}
+.content_area .chart .des1{margin-bottom: 80px;overflow: hidden;}
+.content_area .chart .des1 li{float: left; width: 49%;}
+.contentIn .chart .des1 li.line{width: 18%;}
+.content_area .chart .des1 li div{width: 100%;}
+.content_area .chart .des1 .fr ul{float: right; width: 35%;}
+.content_area .chart .des1 .fl ul{float: left; width: 35%;}
+.content_area .chart .des li ul{width: 100%;}
+.content_area .chart .des1 li li{width: 100%; text-align: center; margin: 0 0 7px 0;
+    padding: 8px 10px 0 10px;}
+.content_area .chart .des1 li span,
+.content_area .chart .des1 li a{display: block; width: 100%;  color: #333; font-size: 14px;
+    background: #fff; border: 1px solid #999; border-radius: 20px;}
+.content_area .chart .des1 li a:hover{background: #004e97; color: #fff; transition: all .5s ease-in;}
+.content_area .chart .des1 li li:last-child{padding: 8px 10px;}
+.content_area .chart .des1 li.line{width: 18px;}
+
+.content_area .chart .des2 {clear: both; width: 90%; margin: 50px auto; display: flex; justify-content: space-between;}
+.content_area .chart .des2 li{ width:14%;  }
+.content_area .chart .des2 ul{line-height: 1.5rem;}
+.content_area .chart .side_header{background: #004e97; border-radius: 20px; padding: 10px 0;}
+.content_area .chart .des2 li a{display: block; margin: 5px 5px;
+    width: 90%; color: #fff; font-size: 16px; text-align: center; border-bottom: 1px solid; transition: all .5s;}
+
+
+.content_area .chart .des2 li li{width: 100%; }
+.content_area .chart .des2 li li a:hover{color: #fff; background: #63b5d1;}
+
+.content_area .chart .des2 li li span, 
+.content_area .chart .des2 li li a{display: block; margin: 0; font-size: 14px; color: #333;
+    border-radius: 30px;  margin: 5px 5px;}
+
+
+.titleH1{font-size: 20px; color: #333; display: flex; gap: 15px;}
+.titleH1 ul{display: flex; gap: 20px;}
+.tab-button{padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;}
+.tab-button.active {
+    background-color: #2e86de;
+    color: white;
+    font-weight: bold;
+  }
+  .tab-button:hover{background: #ddd;}
+
+
+.consttt{ margin: 3% auto 150px; text-align: center;  display: none;}
+.consttt dt{font-size:30px; margin: 30px 0 10px; color: #fff;}
+.consttt dd{font-size: 16px; color: #fff; line-height: 1.5rem;margin: 0 100px;}
+
+.consttt_fir{background-image: url(../images/content1/1.jfif); background-repeat: no-repeat;
+    background-size: cover; margin: 0 auto; padding: 30px 100px 60px;}
+
+.consttt_sec{background-image: url(../images/content1/2.jfif); background-repeat: no-repeat;
+    background-size: cover; padding: 30px 100px 60px;}
+
+.consttt_thr{background-image: url(../images/content1/3.jfif); background-repeat: no-repeat;
+    background-size: cover; padding: 30px 100px 60px;}
+

@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.hidden{display: block; position: absolute;
+    width: 1px; height: 1px; overflow: hidden;
+        color: #FFF7F7; left: -1000px; top: 0;}
+/* .visual{background: url(../common/images/1.jpg) no-repeat; width: 2000px; height: 400px;} */
+
+/* 대법원장 인사말 페이지 내용영역 */
+#content {
+    width: 1400px; 
+    margin: 0 auto; 
+    border: 10px solid #FFF7F7; 
+    border-top: none; 
+    border-bottom: none;}
+.content_area{
+    width: 1400px; 
+    margin: 0 auto; 
+    position: relative;}
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+
+
+/* .content_top{display: flex; margin: 100px 50px 200px; display: flex;  background-image: url(../../images/section2/1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    margin-bottom: 150px;} */
+
+
+
+
+/* .content_top .first{width: 330px; height: 500px; } */
+.content_top p { width: 100%;  padding: 30px; line-height: 1.6rem;
+    text-align: center; color: #333; font-size: 1.3rem;}
+.content_top .sign{width: 100px; height: 20px; position: absolute; 
+    right: 450px; margin-top: 50px; }
+
+.content_area {opacity: 1;}
+
+.content_area .back_img{width: 100%; height: 500px; margin-top: 100px;
+    display: flex; display: flex;  background-image: url(../images/content1/back1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    margin-bottom: 150px;}
+
+    
+.content_area .content_bottom{width: 100%; display: flex; margin-top: 100px; justify-content: space-around;
+    margin-bottom: 200px; background:#FFF7F7;
+    background-image: url(../images/content1/back2.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    margin-bottom: 150px;
+}
+
+.content_area .content_bottom img{width: 310px; height: 412px; border-radius: 20px; margin:25px 0 0 30px}
+ .content_area .content_bottom p{width: 700px; text-align: justify;
+   padding: 50px; background: #fff; backdrop-filter:opacity(.4);
+   border: px solid gray; border-radius: 30px; margin: 25px;
+}
+
+
+.popmenu{width: 1400px; margin: 100px auto; display: flex; flex-wrap: wrap;
+     column-gap: 100px; row-gap: 25px; justify-content: center;}
+.popmenu li{border: 1px solid gray; ;}
+.popmenu li img{width: 250px;}
+.popmenu li strong{text-align: center; font-size: 1.6rem; display: block;}
+.popmenu .last_il{width: 251px; border: none;}
+
+
+/* 아래 방법의 css */
+
+ul{list-style: none;}
+
+/* .pop{width: 1085px; clear: both; border: 1px solid red; 
+    overflow: hidden; margin: 0 auto;}
+.pop .popmenu{position: relative; left: 0; top: 0; width: 4340px; overflow: hidden;}
+.pop ul{float: left; display: non;}
+.pop li{float: left; width: 105px; height: 150px;
+    margin: 0 25px;}
+.pop li p{text-align: center;} */
+
+/* 슬라이드 형식일 때 위에 주석 풀어줌 */
+
+.pop .modal_box{position: fixed; left: 0; top: 0;  width: 100%; height: 100%; 
+    background: #000; opacity: .7; display: none; z-index: 1;}
+
+.pop .pop_btn{position:absolute; top:50%; margin-top: -100px; font-size: 100px; width: 100%; 
+    /* display: none; */
+    /* z-index: 60;     */
+}
+.pop .pop_btn a{display: block; position: absolute; top:0; left:50%; color: #fff; opacity: .4; transition: all .5s;}
+.pop .pop_btn a:hover{opacity: .9;}
+.pop .pop_btn .pre{margin-left: -500px;}
+.pop .pop_btn .next{margin-left: 430px;}
+
+.pop .popup{position: fixed; top: 50%; left: 50%; margin: -300px 0 0 -300px; 
+    width: 600px; height: 600px; background: #fff; box-shadow: 1px 3px 7px 0px #666;
+    z-index: 60; display:none; border: 5px solid #333;}
+.pop  .popup img{width: 25%; margin:100px 50px; float: right; border-radius: 25%;}
+.pop  .popup .txt{padding-top: 100px; font-size: 14px;}
+.pop  .popup dl{width: 550px;
+     /* margin:10px 3%; */
+     text-align: left; padding-left: 30px;}
+.pop  .popup dt{font-size: 1.5em; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    color: #333;}
+.pop  .popup dd:nth-of-type(2){ text-align: justify; padding-top: 20px;}
+.pop  .popup span{font-size:1.1em; 
+    position: absolute;
+    right: 20px; 
+    bottom: 20px; 
+    color: red;}
+
+.pop  .popup .close_btn{position: absolute; top: 25px; right: 5px; color: #000;
+    display: block; overflow: hidden; width: 32px; 
+    height: 32px; padding: 9px 9px; }

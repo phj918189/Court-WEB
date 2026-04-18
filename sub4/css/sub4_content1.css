@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.hidden{display: block; position: absolute;
+    width: 1px; height: 1px; overflow: hidden;
+        color: #FFF7F7; left: -1000px; top: 0;}
+
+#content {width: 1400px; margin: 0 auto; border: 10px solid #FFF7F7; border-top: none; border-bottom: none;}
+
+.logo_text{position: relative; margin-bottom: 50px;}
+.logo_text img{position: absolute; width: 100px; left: 50%; transform: translate(-50%);  bottom: 5px; z-index: -1;}
+.logo_text h3 {font-size: 42px; text-align: center; }
+
+.container_area{width: 1200px; margin: 0 auto; position: relative; overflow: hidden; text-align: center;
+    font-size: 16px;}
+
+.content_area .text{width: 1200px; margin: 0 auto 50px; line-height: 2rem; 
+    font-size: 1.2rem; text-align: justify;}
+.content_area h4{font-size: 34px; font-weight: bold; padding: 50px 0;}
+
+.titleH1{width: 1200px; margin: 0 auto 50px;}
+.titleH1 img{width: 550px; border-radius: 15px;}
+.titleH1 div{display: flex; justify-content: space-between;}
+.titleH1 div ul{position: absolute; right: 500px;}
+.titleH1 div li{line-height: 3.5rem; font-size: 1.3rem; list-style:circle;}
+
+.titleH2{width: 1200px; margin: 0 auto 100px;}
+.titleH2 table{width: 100%; }
+.titleH2 table th, .titleH2 table td{border: 1px solid #ccc; padding: 15px;
+        font-size: 1.2rem;}
+.titleH2 table th{background: #f8f8f8; width: 200px;}

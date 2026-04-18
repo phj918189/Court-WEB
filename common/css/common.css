@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+/* css reset */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+address {
+  font-style: normal;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+.hidden {
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: #fff;
+  position: absolute;
+  left: -1000%;
+  top: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.skipNav {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 110;
+
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.skipNav a {
+  height: 1px;
+  margin-bottom: -1px;
+  overflow: hidden;
+
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.skipNav a:hover,
+.skipNav a:focus,
+.skipNav a:active {
+  height: auto;
+  padding: 15px 0;
+  background: #000;
+}
+
+/* 
+font-family: "Noto Sans KR", sans-serif; font-weight:100~900: 
+font-family: "Roboto", sans-serif; 
+*/
+
+.wrap{width: 100%; overflow: hidden;}
+
+
+/* 헤더 영역 */
+#headerArea{width: 100%; height: 107px;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, .7); transition: background-color .5s ease-out; backdrop-filter: blur(5px);}
+#headerArea .header_inner{width: 1400px; margin: 0 auto; display: flex; justify-content: space-between;}
+#headerArea .logo{margin-top: 25px;}
+#headerArea .logo a{width: 197px; height: 75px;
+    overflow: hidden;}
+
+ 
+#gnb{clear:both;width:1000px; height: 100px;} 
+
+#gnb ul.dropdownmenu{float:left; width: 100%; justify-content: space-between;}
+#gnb ul.dropdownmenu li.menu{position:relative; float:left; width:20%; height: 100px;}
+#gnb ul.dropdownmenu li.menu::after{content: ''; display: block; width: 100%; height: 2px;
+    background: #6bb0f0; position: absolute; left:0; bottom: 0; transform: scaleX(0); transition: all .5s ease-out;}
+#gnb ul.dropdownmenu li.menu:hover::after{content: ''; transform: scaleX(1);} 
+#gnb ul.dropdownmenu li a.depth1{display:block; padding: 45px 0;
+      text-align: center; transition: all .5s; }
+      
+
+
+  /* 2depth */
+#gnb ul.dropdownmenu li ul{width:100%; position:absolute; top: 100px; left:0; padding: 10px 0; 
+    line-height:2em; height: 140px; display: none;}
+
+#gnb ul.dropdownmenu li ul li{ text-align:center; font-weight:bold;}
+#gnb ul li ul li a{display:block;  color:#333; font-weight: 500; transition: all .5s;}
+#gnb ul li ul li a:hover{color:#fff; background: #6bb0f0; border-radius: 15px;}
+      
+#headerArea .top_menu{width: 150px; display: flex;}
+#headerArea .top_menu li{width: 50%; text-align: center;}
+#headerArea .top_menu li a{margin: 50px 0;}
+#headerArea .top_menu li:hover a{background: #004e97; color: #fff; border-radius: 10px; transition: all .5s ease-out;}
+
+
+/* 다크 & 라이트 모드 만들기 */
+/* 라이트 모드 */
+body.light-mode {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* 다크 모드 */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+a.dark-mode {
+  color: #333;
+  background-color: #fff;
+}
+.content_area .content_bottom p.dark-mode {color: #000;}
+
+/* 토글 버튼 스타일 */
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 50px;
+  padding: 5px;
+  width: 40px;
+  position: relative;
+  transition: background-color 0.3s;
+  top: 50px;
+  right: -50px;
+}
+.toggle-switch .fa-solid{margin: 0;}
+
+.toggle-switch.dark {
+  background-color: #1e1e1e;
+}
+
+.toggle-knob {
+  width: 22px;
+  height: 22px;
+  background-color: skyblue;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  transform: translateX(0);
+  position: absolute;
+  left: 0;
+}
+
+.toggle-switch.dark .toggle-knob {
+  transform: translateX(30px);
+  background-color: #999;
+}
+
+.fa-sun{position: absolute; right: 0;}
+
+/* 푸터 영역 */
+#footerArea{width: 100%; color: #fff; background: #004e97;}
+
+#footerArea .footer_inner{width: 1400px; margin: 0 auto; display: flex;  padding: 50px 0; }
+#footerArea img{margin-right:50px ;}
+#footerArea .bottom_menu{display: flex; gap: 50px; margin:10px 0 20px;}
+#footerArea .bottom_menu li a, .sns li a{color: #fff;}
+#footerArea address{font-size: .95rem; line-height: 1.5rem; margin-bottom: 10px; }
+#footerArea .footer_right{margin-left: 480px;}
+
+
+#footerArea .sns{width:150px ;display: flex; justify-content: space-between;}
+#footerArea .sns i{font-size: 2.5rem;}
+#footerArea .sns li:hover i{ color: #ccc;}
+
+#footerArea .go_to_top{width: 80px; height: 80px; 
+  /* background:#004e97;  */
+  background: url(../images/Top.png) no-repeat center;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, .3);
+  position: fixed; left: 50%; margin-left: 750px; bottom: 150px; 
+  border-radius: 50%; z-index: 50; display: none;
+  transition: all .7s;
+}
+
+#footerArea .go_to_top span{display: none; text-align: center; color: #fff; font-size: 1.2rem;
+  font-weight: bold; margin-top: 25px; transition: all .3s;}
+#footerArea .go_to_top:hover {background:steelblue; transition: all .4s ease-out; }
+#footerArea .go_to_top:hover span{display: block;}
+
+/* Family site */
+
+#footerArea .select{width: 150px; background: #fff; border-radius: 20px; margin: 10px 0 15px;}
+#footerArea .select a{padding: 10px 0; text-align: center; }
+.select{width:150px;  background:#fff;
+  position:relative;  margin:200px 0 0 50px; z-index: 20;}
+.select .arrow{ display:block; font-size:1em; padding: 10px 0;overflow: hidden; border-radius: 20px; border:1px solid #fff;
+  text-align: center; transition: all 1s; }
+.select .arrow i{font-size:.8em ; color: red;}
+.select .arrow:hover{background: #000;color: #fff;  border:1px solid #ccc;}
+/* .select .arrow:hover span{color: #fff;} */
+
+
+.select .aList{ position:absolute; top:-185px; left:-1px; width:150px; border-radius: 20px; overflow: hidden;
+  border:1px solid #ccc; display:none}
+.select .aList li{ line-height:1.5em; border-bottom:1px solid #ccc;}
+.select .aList li a{display:block;text-align: center; padding: 5px 0; transition: all .3s; background: #fff;}
+.select .aList li a:hover{ background: #333; color: #fff;}
+

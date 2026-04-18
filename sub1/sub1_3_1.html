@@ -1,0 +1,158 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 8: Ajax &amp; JSON - Example</title>
+   <link rel="stylesheet" href="./css/sub1_content3.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>Ajax load()</h1>
+     
+    </header>
+
+    <section id="listBox">
+      <div id="listBox_1">
+       
+   
+          <div id="sessions">
+            <ul>
+                <li><a class="current" href="./sub1_3.html#law1">Modeling</a></li>
+                <li><a href="./sub1_3.html#law2">Hacking</a></li>
+                <li><a href="./sub1_3.html#law3">Antics</a></li>
+            </ul>
+          </div>
+     
+          
+          <!-- <div id="" class="list11">
+            <!-- 위에 클래스명 변경 해 -->
+            <div class="list1_txt_tit">
+                대법원은 심급제도의 최고법원으로서 <br>
+                상고사건과 재항고 사건을 최종심으로서 판단하고, <br>
+                1회의 재판으로 끝나는 소위 단심(單審) 사건의 관할법원으로서 사건을 담당합니다. <br>
+                대법원의 거의 모든 사건은 상고심 사건입니다.
+            </div>
+            <div id="law1" class="txt_in_list1"> 
+              <!--business_container 클래스를 slid1_text_bottom 으로 변경 -->
+              <ul>
+                <li class="list11_body">
+                  <!-- 이것도 클래스 명을 변경 바람 -->
+                  <img src="../sub1/images/content3/5.jfif" alt="">
+                        <strong>최고법원으로서의 최종 심판권</strong>
+                    <!-- 이미지 하나  -->
+                        <p>고등법원, 특허법원, 지방법원, 가정법원, 군사법원의 민사·형사·행정·특허 및 가사사건 판결에 대한 상고사건  <br>
+                            결정·명령에 대한 재항고사건  <br>
+                            특별한 경우 지방법원의 제1심 판결에 대한 비상상고 사건</p>
+                    </li>
+                    <li class="list11_body">
+                      <img src="../sub1/images/content3/다운로드 (1).jfif" alt="">
+                        <strong>전속관할권</strong> <br>
+                        <p>대통령 및 국회의원 선거 및 당선의 효력에 관한 소송</p>
+                    </li>
+                    <li class="list11_body">
+                      <img src="../sub1/images/content3/다운로드.jfif" alt="">
+                        <strong>헌법재판권</strong>
+                        <p>대법원도 명령과 규칙의 위헌심판을 통해 헌법재판을 담당합니다.
+                        - 명령·규칙·처분 또는 행정기관의 조치, 지방자치단체의 조례가 헌법이나 법률에 위반되는지에 대한 최종적인 심사권한  <br>
+                        또한 대법원은 각급 법원의 판결이 헌법에 위반되었는지를 심사합니다.</p>                            </li>
+                </ul>
+            </div>
+           </div>
+
+           <!-- 두번째 슬라이드 -->
+
+           <div id="law2" class="second_page">
+            <h5  class="small_tit">심판권의 행사</h5>
+                <!-- <ul>
+                    <li>심판권</li>
+                    <li>행사</li>
+                    <li>공개변론</li>
+                </ul> -->
+                <p class="small_tit_1">대법원의 심판권은 전원합의체와 대법관 3인 이상으로 구성된 부에서 행사한다. </p>
+          
+
+           <ul>
+            <li class="second_page_list1">
+                <strong>재판부 구성</strong>
+                <p>재판부는 부(部)와  <br>
+                    전원합의체로 구성된다.</p>
+            </li>
+            <li class="second_page_list2">
+                <strong>합의방식</strong>
+                <p>
+                    부 - 전원 의견 일치에 따라 재판 <br>
+                    전원합의체 - 출석 과반수 의견에 따라 심판
+                </p>
+            </li>
+            <li class="second_page_list3">
+                <strong>구성방식</strong>
+                <p>부 - 대법관 4인으로 구성되며  <br>
+                    3개의 부가 존재한다. <br>
+                    전원합의체 - 대법원장이 재판장이 되며,  <br>
+                    대법관 전원의 3분의 2 이상으로 구성된다.
+                </p>
+            </li>
+            
+            <li class="second_page_list4">
+                <strong>대상사건</strong>
+                <p>
+                    부 - 주로 재판부에서 심판
+                    전원합의체 <br>
+                    부에서 의견이 일치되지 못한 경우 <br> 
+                    명령·규칙이 헌법 또는 법률에 위반된다고 인정하는 경우 <br>
+                    부에서 재판함이 적당하지 않다고 인정하는 경우
+                </p>
+            </li>
+            <div class="center_building">
+                <i class="fa-solid fa-landmark-flag"></i>
+            </div>
+           </ul>
+        </div>
+
+           <!-- 세번째 슬라이드 -->
+
+           
+           <div id="law3" class="third_page">
+                <h5  class="small_tit">대법원에서의 공개변론</h5>
+                <!-- <ul>
+                    <li>심판권</li>
+                    <li>행사</li>
+                    <li>공개변론</li>
+                </ul> -->
+                <p class="small_tit_1">대법원에서의 변론에 관한 규칙(규칙 제2765) <a class="view_detail" href="#">상세보기</a></p>
+            
+
+            <div class="third_main_text">
+                <p>
+                    대법원의 상고사건은 상고장, 상고이유서, 답변서 그 밖의 소송기록에 의하여 변론 없이 판결할 수 있습니다.  <br> 
+                    그러나 대법원이 소송관계를 분명하게 하기 위하여 필요한 경우에는, 특정한 사항에 관하여 변론을 열어 참고인의 진술을 들을 수 있도록 소송법에 규정되어 있습니다.  <br> 
+                    공개변론 대상사건은 주로 사회 각층의 이해가 충돌하는 중요한 사건, 국민 생활에 중대한 영향을 미치는 사건 등입니다.  <br> 
+                    공개변론은 당사자의 진술, 그 분야의 전문적 식견이나 지식을 가지고 있는 참고인의 진술, 대법관의 당사자, 참고인에 대한 질의 절차로 진행됩니다.  <br> 
+                </p> <br>
+                <p>
+                    한편, 법원조직법과 대법원규칙에 따라 대법원은 국민의 재판에 대한 이해와 사법에 대한 신뢰를 높이기 위하여 인터넷, 텔레비전 등 방송통신매체를 통하여 공개변론 과정을 방송하게 할 수 있습니다.  <br> 
+                    대법원 전원합의체 공개변론 사건을 중계방송에 의하여 투명하게 공개함으로써, 국민의 사법부에 대한 신뢰를 제고할 수 있고, 사회적 가치 판단이 필요한 중요 사건에 대한 국민적 공론의 장을 마련할 수 있으며, 궁극적으로 대법원이 우리 사회의 갈등을 조율하고 보다 발전된 형태의 사회통합을 이루는 기능을 충실하게 발휘하게 하는 토대를 마련할 수 있습니다.  <br> 
+                    이와 같은 취지에 따라 대법원은 2013. 3. 국외이송약취 사건에 대하여 전원합의체 공개변론을 열고 사상 최초로 중계방송을 실시하였습니다.
+                </p>
+            </div>
+        </div>
+
+
+           
+        </div> -->
+        
+    
+          <div id="details">
+              <!--이 위치에 데이터가 로드된다 -->
+          </div>
+
+
+      </div><!-- #container -->
+    </section><!-- #content -->
+
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/example.js"></script>
+
+  </body>
+</html> -->
