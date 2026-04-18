@@ -1,5 +1,37 @@
 // 전체 페이지 공통 js
 
+// sub 페이지 공통 헤더/푸터 include (정적 서버 대응)
+(function () {
+  var pathname = window.location.pathname.replace(/\\/g, "/");
+  var isSubPage = /\/sub\d+\//.test(pathname);
+  if (!isSubPage) return;
+
+  var wrap = document.querySelector(".wrap");
+  if (!wrap) return;
+
+  function loadPartial(path) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", path, false);
+    xhr.send(null);
+
+    if (xhr.status >= 200 && xhr.status < 300) {
+      return xhr.responseText;
+    }
+    console.error("Failed to load partial:", path);
+    return "";
+  }
+
+  if (!document.getElementById("headerArea")) {
+    var headerHtml = loadPartial("../common/sub_header.html");
+    if (headerHtml) wrap.insertAdjacentHTML("afterbegin", headerHtml);
+  }
+
+  if (!document.getElementById("footerArea")) {
+    var footerHtml = loadPartial("../common/sub_footer.html");
+    if (footerHtml) wrap.insertAdjacentHTML("beforeend", footerHtml);
+  }
+})();
+
 // scroll animation aos
 
         AOS.init({

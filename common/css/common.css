@@ -215,6 +215,17 @@ font-family: "Roboto", sans-serif;
 #headerArea .top_menu li a{margin: 50px 0;}
 #headerArea .top_menu li:hover a{background: #004e97; color: #fff; border-radius: 10px; transition: all .5s ease-out;}
 
+.visual ul,
+.quick-service__list,
+.trial-card__list,
+.court-about__list,
+.notice-renewal__list,
+.info-guide__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* 다크 & 라이트 모드 만들기 */
 /* 라이트 모드 */

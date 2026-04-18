@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>법원소개-비전</title>
+    <title>재판안내-주요재판</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -44,15 +44,22 @@
             <div>
                 <div class="title_area">
                     <div class="line_map">
-                        home > 재판안내 > <strong>주요재판</strong>
+                        재판안내 > <strong>주요재판</strong>
                     </div>
                     <h2>주요재판</h2>
                 </div>
             </div>
-            <div class="logo_text">
+            <!-- <div class="trial_intro">
+              <strong>주요재판 정보를 더 빠르게 확인할 수 있도록 표 구조를 정리했습니다.</strong>
+              <p>
+                선고 및 진행 재판을 구분해 제공하고, 사건번호·사건명·재판부·사건종류를 한눈에
+                확인할 수 있도록 가독성과 시각적 위계를 개선했습니다.
+              </p>
+            </div> -->
+            <!-- <div class="logo_text">
                 <img src="./common/images/small_logo.png" alt="">
                 <h3>재 판</h3>
-            </div>
+            </div> -->
             
             
               <div>
@@ -66,8 +73,8 @@
                   </div>
 
                   
-                  <!-- <div class="tableSearch">
-                   
+                  <div class="tableSearch">
+                    <label class="hidden" for="jdept">재판부 선택</label>
                     <select class="graySelect" name="jdept" id="jdept">
                       <option value="">재판부</option>
                       <option value="전합">전합</option>
@@ -75,17 +82,20 @@
                       <option value="제2부">제2부</option>
                       <option value="제3부">제3부</option>
                     </select>
-                   
+                  
+                    <label class="hidden" for="jtype">사건종류 선택</label>
                     <select name="jtype" id="jtype">
-                      <option value>사건종류</option>
-                      <option value="11">민사</option>
-                      <option value="12">형사</option>
-                      <option value="13">특별</option>
+                      <option value="">사건종류</option>
+                      <option value="민사">민사</option>
+                      <option value="형사">형사</option>
+                      <option value="특별">특별</option>
                     </select>
-              
-                    <input class="grayInput" type="text" name="searchCase" id="case_search" title="검색어 입력">
+                  
+                    <label class="hidden" for="case_search">검색어 입력</label>
+                    <input class="grayInput" type="text" name="searchCase" id="case_search" placeholder="사건명 또는 사건번호 검색" />
+                  
                     <a class="searchBtn" href="#">검색</a>
-                  </div> -->
+                  </div>
                 
 
                 <form action="">
