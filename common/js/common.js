@@ -1,35 +1,28 @@
 // 전체 페이지 공통 js
 
-// sub 페이지 공통 헤더/푸터 include (정적 서버 대응)
+// sub 페이지에서 PHP include가 동작하지 않는 정적 서버 환경 대비 폴백
 (function () {
-  var pathname = window.location.pathname.replace(/\\/g, "/");
-  var isSubPage = /\/sub\d+\//.test(pathname);
+  var path = window.location.pathname.replace(/\\/g, "/");
+  var isSubPage = /\/sub\d+\//.test(path);
   if (!isSubPage) return;
 
-  var wrap = document.querySelector(".wrap");
-  if (!wrap) return;
+  function loadPartial(targetSelector, partialPath, position) {
+    if (document.querySelector(targetSelector)) return;
 
-  function loadPartial(path) {
+    var wrap = document.querySelector(".wrap");
+    if (!wrap) return;
+
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", path, false);
+    xhr.open("GET", partialPath, false);
     xhr.send(null);
 
     if (xhr.status >= 200 && xhr.status < 300) {
-      return xhr.responseText;
+      wrap.insertAdjacentHTML(position, xhr.responseText);
     }
-    console.error("Failed to load partial:", path);
-    return "";
   }
 
-  if (!document.getElementById("headerArea")) {
-    var headerHtml = loadPartial("../common/sub_header.html");
-    if (headerHtml) wrap.insertAdjacentHTML("afterbegin", headerHtml);
-  }
-
-  if (!document.getElementById("footerArea")) {
-    var footerHtml = loadPartial("../common/sub_footer.html");
-    if (footerHtml) wrap.insertAdjacentHTML("beforeend", footerHtml);
-  }
+  loadPartial("#headerArea", "../common/sub_header.html", "afterbegin");
+  loadPartial("#footerArea", "../common/sub_footer.html", "beforeend");
 })();
 
 // scroll animation aos

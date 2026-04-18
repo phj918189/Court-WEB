@@ -120,3 +120,101 @@
   left: 50%; transform: translate(-50%); top: 250px; transition: all 1s ease-out; transform: scaleX(2); transition-delay: 1s;
   }
 #content .title_area p{font-size: 1.2rem; text-align: center;}
+
+/* Portfolio refresh overrides */
+.visual {
+  width: 100%;
+  max-width: none;
+  height: 340px;
+  left: 0;
+  transform: none;
+  background: linear-gradient(120deg, rgba(8, 45, 84, .78), rgba(24, 96, 170, .45)), url(../images/1.jpg) center / cover no-repeat;
+}
+
+.visual strong {
+  font-size: 2.2rem;
+  letter-spacing: .12em;
+  font-weight: 700;
+  top: 205px;
+}
+
+.sub_nav ul {
+  width: min(92%, 1200px);
+}
+
+.sub_nav ul li {
+  width: 25%;
+}
+
+#content .title_area {
+  width: min(92%, 1400px);
+  padding-bottom: 70px;
+}
+
+#content .title_area .line_map {
+  right: 0;
+  top: 10px;
+}
+
+#content .title_area h2 {
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  margin: 120px 0 84px;
+}
+
+#content .title_area h2::after {
+  top: 180px;
+  height: 72px;
+}
+
+@media screen and (max-width: 1024px) {
+  #headerArea .header_inner,
+  #footerArea .footer_inner {
+    width: 94%;
+  }
+
+  .visual {
+    height: 290px;
+  }
+
+  .visual strong {
+    top: 170px;
+    font-size: 1.9rem;
+  }
+
+  .sub_nav ul li a {
+    font-size: 1.04rem;
+  }
+
+  #content .title_area h2 {
+    margin-top: 94px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .visual {
+    height: 220px;
+  }
+
+  .visual strong {
+    top: 130px;
+    font-size: 1.4rem;
+  }
+
+  .sub_nav ul {
+    width: 100%;
+  }
+
+  .sub_nav ul li a {
+    font-size: .92rem;
+    padding: 14px 6px;
+  }
+
+  #content .title_area h2 {
+    margin: 82px 0 58px;
+  }
+
+  #content .title_area h2::after {
+    top: 130px;
+    height: 52px;
+  }
+}
