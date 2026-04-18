@@ -25,6 +25,72 @@
   loadPartial("#footerArea", "../common/sub_footer.html", "beforeend");
 })();
 
+// 공통 UI 유틸
+window.CourtUI = (function () {
+  function initTabs(options) {
+    var tabSelector = options.tabSelector;
+    var panelSelector = options.panelSelector;
+    var activeClass = options.activeClass || "active";
+    var activeTabClass = options.activeTabClass || "is-active";
+    var initialIndex = options.initialIndex || 0;
+
+    var tabs = document.querySelectorAll(tabSelector);
+    var panels = document.querySelectorAll(panelSelector);
+    if (!tabs.length || !panels.length) return;
+
+    function activate(index) {
+      panels.forEach(function (panel, panelIndex) {
+        panel.style.display = panelIndex === index ? "block" : "none";
+      });
+      tabs.forEach(function (tab, tabIndex) {
+        tab.classList.remove(activeClass, activeTabClass);
+        if (tabIndex === index) {
+          tab.classList.add(activeClass, activeTabClass);
+        }
+      });
+    }
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function (event) {
+        if (tab.tagName.toLowerCase() === "a") {
+          event.preventDefault();
+        }
+        activate(index);
+      });
+    });
+
+    activate(initialIndex);
+  }
+
+  function initAccordion(options) {
+    var rootSelector = options.rootSelector;
+    var triggerSelector = options.triggerSelector;
+    var panelSelector = options.panelSelector;
+    var openClass = options.openClass || "is-open";
+
+    var roots = document.querySelectorAll(rootSelector);
+    if (!roots.length) return;
+
+    roots.forEach(function (root) {
+      var trigger = root.querySelector(triggerSelector);
+      var panel = root.querySelector(panelSelector);
+      if (!trigger || !panel) return;
+
+      panel.style.display = "none";
+      trigger.addEventListener("click", function (event) {
+        event.preventDefault();
+        var isOpen = root.classList.toggle(openClass);
+        panel.style.display = isOpen ? "block" : "none";
+      });
+    });
+  }
+
+  return {
+    initTabs: initTabs,
+    initAccordion: initAccordion,
+  };
+})();
+
 // scroll animation aos
 
         AOS.init({

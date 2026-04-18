@@ -69,32 +69,35 @@ $(document).ready(function () {
           dataPrint(useData);
         }
   
-        $('.searchBtn').on('click', function (e) {
-          e.preventDefault();
-  
+        function runSearch() {
           const searchValue = $('#case_search').val().trim();
-  
+
           if (searchValue === '') {
             dataPrint(useData);
             return;
           }
-  
+
           const filteredData = useData.filter(item =>
             String(item.Num).includes(searchValue) ||
             String(item.Title).includes(searchValue)
           );
-  
+
           if (filteredData.length > 0) {
             dataPrint(filteredData);
           } else {
             emptyPrint('검색어에 해당하는 결과가 없습니다.');
           }
+        }
+
+        $('.searchBtn').on('click', function (e) {
+          e.preventDefault();
+          runSearch();
         });
   
-        $('#case_search').on('keypress', function (e) {
-          if (e.which === 13) {
+        $('#case_search').on('keydown', function (e) {
+          if (e.key === 'Enter') {
             e.preventDefault();
-            $('.searchBtn').trigger('click');
+            runSearch();
           }
         });
       },

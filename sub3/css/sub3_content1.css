@@ -117,16 +117,33 @@
 
 .content_area .chart .des2 ul {
     line-height: 1.45rem;
+    margin-top: 10px;
 }
 
 .content_area .chart .side_header {
     display: block;
     background: #0f4d8a;
     border-radius: 12px;
-    padding: 12px 10px;
+    padding: 12px 34px 12px 12px;
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
+    text-align: left;
+    position: relative;
+}
+
+.content_area .chart .side_header::after {
+    content: "+";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.content_area .chart .des2 > li.is-open .side_header::after {
+    content: "-";
 }
 
 .content_area .chart .des2 li li a {
@@ -168,6 +185,12 @@
 }
 
 .tab-button.active {
+    background-color: #0f4d8a;
+    color: #fff;
+    font-weight: 700;
+}
+
+.tab-button.is-active {
     background-color: #0f4d8a;
     color: #fff;
     font-weight: 700;

@@ -1,0 +1,142 @@
+:root {
+  --ui-bg: #f4f8fc;
+  --ui-surface: #ffffff;
+  --ui-surface-muted: #f7fbff;
+  --ui-border: #d9e5f1;
+  --ui-text: #24384c;
+  --ui-text-muted: #5d7288;
+  --ui-primary: #0f4d8a;
+  --ui-primary-strong: #0a3b69;
+  --ui-radius-sm: 10px;
+  --ui-radius-md: 16px;
+  --ui-radius-lg: 24px;
+  --ui-shadow-sm: 0 8px 20px rgba(16, 47, 81, 0.06);
+}
+
+.ui-container {
+  width: min(92%, 1280px);
+  margin: 0 auto;
+}
+
+.ui-section {
+  margin: 0 0 34px;
+}
+
+.ui-card {
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-lg);
+  box-shadow: var(--ui-shadow-sm);
+}
+
+.ui-card-muted {
+  background: var(--ui-surface-muted);
+}
+
+.ui-heading {
+  color: var(--ui-text);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.ui-subheading {
+  color: var(--ui-primary);
+  font-weight: 700;
+}
+
+.ui-text {
+  color: var(--ui-text);
+  line-height: 1.8;
+}
+
+.ui-text-muted {
+  color: var(--ui-text-muted);
+}
+
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+}
+
+.ui-btn-primary {
+  color: #fff;
+  background: var(--ui-primary);
+}
+
+.ui-btn-primary:hover {
+  background: var(--ui-primary-strong);
+}
+
+.ui-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--ui-primary);
+}
+
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  border-radius: var(--ui-radius-md);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--ui-border);
+}
+
+.ui-table th,
+.ui-table td {
+  border: 1px solid var(--ui-border);
+  padding: 14px 16px;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.ui-table th {
+  background: #f2f7fc;
+  color: var(--ui-text);
+  font-weight: 700;
+}
+
+.ui-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ui-tab {
+  border: 1px solid #cddbeb;
+  border-radius: var(--ui-radius-sm);
+  padding: 9px 16px;
+  background: #f6f9fc;
+  color: var(--ui-text);
+}
+
+.ui-tab.is-active {
+  color: #fff;
+  border-color: var(--ui-primary);
+  background: var(--ui-primary);
+}
+
+@media screen and (max-width: 768px) {
+  .ui-card {
+    border-radius: var(--ui-radius-md);
+  }
+
+  .ui-table th,
+  .ui-table td {
+    font-size: 0.94rem;
+    padding: 12px 14px;
+  }
+}
